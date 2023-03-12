@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Список карт Heartstone</title>
+</head>
+<body>
+    <h1>Список карт Heartstone</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Название</th>
+                <th>Тип</th>
+                <th>Редкость</th>
+                <th>Стоимость</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for card in card_info %}
+            <tr>
+                <td>{{ card.name }}</td>
+                <td>{{ card.type }}</td>
+                <td>{{ card.rarity }}</td>
+                <td align="justify">{{ card.cost }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
